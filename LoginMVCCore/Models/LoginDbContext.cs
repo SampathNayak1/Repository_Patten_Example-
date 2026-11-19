@@ -1,0 +1,12 @@
+﻿using Microsoft.EntityFrameworkCore;
+
+namespace LoginMVCCore.Models
+{
+    public class LoginDbContext:DbContext
+    {
+        public LoginDbContext(DbContextOptions<LoginDbContext> options) : base(options)
+        {
+        }
+        public DbSet<Login> Logins { get; set; }
+    }
+}
